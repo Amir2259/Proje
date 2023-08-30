@@ -1,0 +1,258 @@
+/* #Primary
+================================================== */
+
+@import url("https://v1.fontapi.ir/css/ShabnamFD");
+* {
+  direction: rtl;
+  font-family: "Shabnam FD", sans-serif;
+}
+
+/* #Navigation
+================================================== */
+.top {
+  display: flex;
+  background-color: #002147;
+  justify-content: space-between;
+}
+.top img {
+  margin-right: 90px;
+}
+.sticky.is-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+nav {
+  background: #002147;
+}
+.item {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  padding: 10px;
+}
+.item .nav-link:hover {
+  font-weight: bolder;
+  color: white;
+}
+.ScrollNav {
+  backdrop-filter: blur(20px);
+  background-color: #ffffff70;
+  -webkit-box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.41);
+}
+.ScrollNav .navbar-nav .nav-item .nav-link {
+  color: black;
+}
+.item div {
+  border: none;
+  backdrop-filter: blur(50px);
+  background-color: #ffffff49;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 3px;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 500;
+  transition: all 200ms linear;
+}
+.nav-item:hover .nav-link {
+  color: #8167a9 !important;
+}
+.nav-item:after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: #8167a9;
+  opacity: 0;
+  transition: all 200ms linear;
+}
+.nav-item:hover:after {
+  bottom: 0;
+  opacity: 1;
+}
+.nav-item.active:hover:after {
+  opacity: 0;
+}
+.nav-item {
+  position: relative;
+  transition: all 200ms linear;
+}
+
+/* #Media
+================================================== */
+
+@media (max-width: 767px) {
+  .nav-item:after {
+    display: none;
+  }
+  .dropdown-menu {
+    border: none;
+  }
+  .dropdown-menu a {
+    color: white;
+  }
+  .nav-item::before {
+    position: absolute;
+    display: block;
+    top: 15px;
+    left: 0;
+    width: 11px;
+    height: 1px;
+    content: "";
+    border: none;
+    background-color: #000;
+    vertical-align: 0;
+  }
+}
+
+/* #carousel
+================================================== */
+#carousel {
+  margin-top: 50px;
+}
+.carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.301);
+  color: black;
+}
+.carousel-item a {
+  color: black;
+  text-decoration: none;
+}
+.carousel-item a:hover {
+  font-weight: bold;
+}
+/* .news
+================================================== */
+.event {
+  text-align: justify;
+  border-radius: 15px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 17px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 17px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 17px -5px rgba(0, 0, 0, 0.75);
+}
+.event p:first-child {
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.event {
+  list-style-type: none;
+}
+.event a {
+  color: #000;
+  text-decoration: none;
+}
+.event li {
+  margin-bottom: 10px;
+}
+.event li:hover {
+  font-weight: bold;
+}
+.more-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* .centerPanel
+================================================== */
+.image {
+  margin: 50px auto;
+  height: 400px;
+  background-image: url("../image/Capture.JPG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.more-links {
+  margin-top: 30px;
+  text-align: center;
+}
+.more-links div {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 40px -33px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 40px -33px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 40px -33px rgba(0, 0, 0, 0.75);
+}
+.more-links div:hover {
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 40px -27px rgba(0, 33, 71, 0.746);
+  -moz-box-shadow: 0px 0px 40px -27px rgba(0, 33, 71, 0.746);
+  box-shadow: 0px 0px 40px -27px rgba(0, 33, 71, 0.746);
+}
+.more-links a {
+  color: #000;
+  text-decoration: none;
+}
+.more-links li {
+  text-align: right;
+  list-style-type: none;
+  margin-right: 5px;
+}
+.more-links li:hover {
+  font-weight: bold;
+}
+
+/* footer
+================================================== */
+footer {
+  padding-top: 20px;
+  margin-top: 20px;
+  background-color: #25025a;
+  color: white;
+  text-align: right;
+}
+p.title {
+  border-bottom: 1px solid white;
+}
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer li {
+  list-style-type: none;
+  margin-left: 30px;
+}
+footer .widget li {
+  float: left;
+}
+footer .address .info,
+footer .address i {
+  display: table-cell;
+  padding-left: 10px;
+}
+.rtl footer .address .info {
+  padding-right: 5px;
+}
+.ltr footer .address .info {
+  padding-left: 5px;
+}
+.callpanel {
+  display: flex;
+  justify-content: center;
+}
